@@ -24,6 +24,8 @@ public class LinkedList {
             System.out.print(tnode.data+" ");
             tnode = tnode.next;
         }
+
+        System.out.println();
     }
 
     //push a new node to the front
