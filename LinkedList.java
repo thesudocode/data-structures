@@ -58,6 +58,22 @@ public class LinkedList {
 
     }
 
+    //append the node at the end
+    public void append(int data){
+
+        Node newNode = new Node(data);
+
+        Node tempNode = head;
+
+        while(tempNode.next != null){
+            tempNode = tempNode.next;
+
+        }
+
+        tempNode.next = newNode;
+        newNode.next = null;
+    }
+
     //initialising the linked-list
     public static void main(String[] args){
 
@@ -70,6 +86,8 @@ public class LinkedList {
 
         list.printList();
         list.pushAfter(node, 200);
+        list.printList();
+        list.append(69);
         list.printList();
     }
 
