@@ -26,22 +26,27 @@ public class LinkedList {
         }
     }
 
+    //push a new node to the front
+    public void pushToFront(int data){
+
+        Node newNode = new Node(data);
+
+        if(head == null){
+            newNode.next = null;
+        }else{
+            newNode.next = head;
+        }
+        head = newNode;
+
+        printList();
+    }
 
     //initialising the linked-list
     public static void main(String[] args){
 
         LinkedList list = new LinkedList();
 
-        Node first = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-
-        list.head = first;
-        first.next = second;
-        second.next = third;
-
-
-        list.printList();
+        list.pushToFront(4);
     }
 
 }
