@@ -15,6 +15,7 @@ public class LinkedList {
         Node(int d){data = d;}
     }
 
+    //initialising the linked-list
     public static void main(String[] args){
 
         LinkedList list = new LinkedList();
