@@ -15,6 +15,18 @@ public class LinkedList {
         Node(int d){data = d;}
     }
 
+    // This function prints contents of linked list starting from head
+    public void printList()
+    {
+        Node tnode = head;
+        while (tnode != null)
+        {
+            System.out.print(tnode.data+" ");
+            tnode = tnode.next;
+        }
+    }
+
+
     //initialising the linked-list
     public static void main(String[] args){
 
@@ -28,6 +40,8 @@ public class LinkedList {
         first.next = second;
         second.next = third;
 
+
+        list.printList();
     }
 
 }
