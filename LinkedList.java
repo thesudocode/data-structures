@@ -39,6 +39,21 @@ public class LinkedList {
         head = newNode;
 
         printList();
+
+    }
+
+    //push a new node after some given node
+    public void pushAfter(Node prevNode, int data){
+
+        if(prevNode == null){
+            System.out.println("The node that you have provided doesn't exist");
+            return;
+        }
+
+        Node newNode = new Node(data);
+        newNode.next = prevNode.next;
+        prevNode.next = newNode;
+
     }
 
     //initialising the linked-list
@@ -46,7 +61,14 @@ public class LinkedList {
 
         LinkedList list = new LinkedList();
 
-        list.pushToFront(4);
+        Node node = new Node(5);
+        node.next = null;
+
+        list.head = node;
+
+        list.printList();
+        list.pushAfter(node, 200);
+        list.printList();
     }
 
 }
